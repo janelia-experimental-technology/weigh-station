@@ -2,6 +2,7 @@
 ;; File edits may be overwritten!
 (specifications->manifest
  '("rpi-imager"
+   "util-linux"
    "make"
    "bash"
    "git"

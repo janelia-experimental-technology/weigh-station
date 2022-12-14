@@ -154,7 +154,37 @@ org
 
 *** Flash Operating System Image onto SD Card
 
+**** Find SD card path
+
+e.g. /dev/sdc
+
+#+BEGIN_SRC sh :noweb yes
+lsblk
+#+END_SRC
+
+**** Get and Run rpi-imager
+
+***** Download
+
 [[https://github.com/raspberrypi/rpi-imager]]
+
+***** Guix
+
+#+BEGIN_SRC sh :noweb yes
+make sd-card
+#+END_SRC
+
+***** Advanced Options
+
+- Set hostname: <<name>>.local
+- Enable SSH
+  - Use password authentication
+- Set username and password
+  - Username: pi
+  - Password: *
+- Set locale settings
+  - Time zone: America/New_York
+  - Keyboard layout: us
 
 * Development
 
@@ -241,6 +271,7 @@ make metadata
 ;; File edits may be overwritten!
 (specifications->manifest
  '("rpi-imager"
+   "util-linux"
    "make"
    "bash"
    "git"
@@ -260,7 +291,8 @@ upload: metadata package twine add clean
 
 GUIX-SHELL = guix time-machine -C .channels.scm -- shell --pure --check -m .manifest.scm
 GUIX-CONTAINER = guix time-machine -C .channels.scm -- shell -m .manifest.scm --container
-GUIX-CONTAINER-GUI = $(GUIX-CONTAINER) -E "^DISPLAY$$" -E "^XAUTHORITY$$" --expose="$$XAUTHORITY" --expose=/tmp/.X11-unix/ --expose=$$HOME/.Xauthority --expose=/etc/machine-id
+GUIX-CONTAINER-GUI = $(GUIX-CONTAINER) -E "^DISPLAY$$" -E "^XAUTHORITY$$" -E "^LANGUAGE$$" -E "^LANG$$" --expose="$$XAUTHORITY" --expose="/etc/timezone" --expose=/tmp/.X11-unix/ --expose=$$HOME/.Xauthority --expose=/etc/machine-id
+GUIX-CONTAINER-GUI-SHARED = $(GUIX-CONTAINER-GUI) --share=$(DEVICE)
 
 .PHONY: shell
 shell:
@@ -272,7 +304,7 @@ container:
 
 .PHONY: sd-card
 sd-card:
-	$(GUIX-SHELL) -- rpi-imager
+	$(GUIX-SHELL) --expose="$$HOME/Downloads" -- rpi-imager
 
 .PHONY: metadata-edits
 metadata-edits:
