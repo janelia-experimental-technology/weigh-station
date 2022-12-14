@@ -11,12 +11,12 @@
 
 #+NAME: name
 #+BEGIN_SRC text :exports none :noweb yes
-weigh-station
+weigher
 #+END_SRC
 
 #+NAME: repository-name
 #+BEGIN_SRC text :exports none :noweb yes
-weigh-station
+weigher
 #+END_SRC
 
 #+NAME: version
@@ -26,13 +26,13 @@ weigh-station
 
 #+NAME: description
 #+BEGIN_SRC text :exports none :noweb yes
-Rat City weigh station documentation for the Janelia Gowan Lab.
+Rat City weigher documentation for the Janelia Gowan Lab.
 #+END_SRC
 
 #+NAME: references
 #+BEGIN_SRC text :exports none :noweb yes
-https://github.com/janelia-ros/weigh_station_ros
 https://github.com/janelia-pypi/loadstar_sensors_interface_python
+https://github.com/janelia-ros/<<name>>_ros
 #+END_SRC
 
 #+NAME: creation-date

@@ -1,33 +1,33 @@
-- [About](#orgd844015)
-- [Setup](#org18b487e)
-- [Development](#orgbdf2ca1)
+- [About](#orgf926b82)
+- [Setup](#orgcc44582)
+- [Development](#org961c8d0)
 
     <!-- This file is generated automatically from .metadata.org -->
     <!-- File edits may be overwritten! -->
 
 
-<a id="orgd844015"></a>
+<a id="orgf926b82"></a>
 
 # About
 
 ```markdown
-- Name: weigh-station
-- Description: Rat City weigh station documentation for the Janelia Gowan Lab.
+- Name: weigher
+- Description: Rat City weigher documentation for the Janelia Gowan Lab.
 - Version: 0.1.0
 - Release Date: 2022-12-14
 - Creation Date: 2022-12-14
 - License: BSD-3-Clause
-- URL: https://github.com/janelia-experimental-technology/weigh-station
+- URL: https://github.com/janelia-experimental-technology/weigher
 - Author: Peter Polidoro
 - Email: peter@polidoro.io
 - Copyright: 2022 Howard Hughes Medical Institute
 - References:
-  - https://github.com/janelia-ros/weigh_station_ros
   - https://github.com/janelia-pypi/loadstar_sensors_interface_python
+  - https://github.com/janelia-ros/weigher_ros
 ```
 
 
-<a id="org18b487e"></a>
+<a id="orgcc44582"></a>
 
 # Setup
 
@@ -45,7 +45,7 @@
 <https://github.com/raspberrypi/rpi-imager>
 
 
-<a id="orgbdf2ca1"></a>
+<a id="org961c8d0"></a>
 
 # Development
 
@@ -56,8 +56,8 @@
 1.  Clone repository.
 
 ```sh
-git clone https://github.com/janelia-experimental-technology/weigh-station
-cd weigh-station
+git clone https://github.com/janelia-experimental-technology/weigher
+cd weigher
 ```
 
 ```sh
