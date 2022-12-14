@@ -148,9 +148,13 @@ org
 
 ** Single Board Computer
 
-*** Download ros-realtime-rpi4-image
+*** Download Operating System Image
 
 [[https://github.com/ros-realtime/ros-realtime-rpi4-image/releases]]
+
+*** Flash Operating System Image onto SD Card
+
+[[https://github.com/raspberrypi/rpi-imager]]
 
 * Development
 
@@ -265,6 +269,10 @@ shell:
 .PHONY: container
 container:
 	$(GUIX-CONTAINER)
+
+.PHONY: sd-card
+sd-card:
+	$(GUIX-SHELL) -- rpi-imager
 
 .PHONY: metadata-edits
 metadata-edits:

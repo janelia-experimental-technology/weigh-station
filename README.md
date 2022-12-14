@@ -1,12 +1,12 @@
-- [About](#orgefb4178)
-- [Setup](#org5c413d2)
-- [Development](#orgbe39e52)
+- [About](#orgd844015)
+- [Setup](#org18b487e)
+- [Development](#orgbdf2ca1)
 
     <!-- This file is generated automatically from .metadata.org -->
     <!-- File edits may be overwritten! -->
 
 
-<a id="orgefb4178"></a>
+<a id="orgd844015"></a>
 
 # About
 
@@ -27,7 +27,7 @@
 ```
 
 
-<a id="org5c413d2"></a>
+<a id="org18b487e"></a>
 
 # Setup
 
@@ -35,12 +35,17 @@
 ## Single Board Computer
 
 
-### Download ros-realtime-rpi4-image
+### Download Operating System Image
 
 <https://github.com/ros-realtime/ros-realtime-rpi4-image/releases>
 
 
-<a id="orgbe39e52"></a>
+### Flash Operating System Image onto SD Card
+
+<https://github.com/raspberrypi/rpi-imager>
+
+
+<a id="orgbdf2ca1"></a>
 
 # Development
 

@@ -16,6 +16,10 @@ shell:
 container:
 	$(GUIX-CONTAINER)
 
+.PHONY: sd-card
+sd-card:
+	$(GUIX-SHELL) -- rpi-imager
+
 .PHONY: metadata-edits
 metadata-edits:
 	$(GUIX-CONTAINER-GUI) -- sh -c "emacs -q --no-site-file --no-site-lisp --no-splash -l .init.el --file .metadata.org"
